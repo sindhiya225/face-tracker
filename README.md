@@ -107,7 +107,7 @@ face_tracker/
 ### 2. Clone & Install
 
 ```bash
-git clone <your-repo-url>
+git clone <https://github.com/sindhiya225/face-tracker>
 cd face_tracker
 
 # Create virtual environment (recommended)
@@ -278,31 +278,22 @@ To enable GPU:
 
 ## 🧪 Sample Output
 
-### `logs/events.log` (excerpt)
-```
-2026-03-21 10:00:01 | INFO     | EventLogger             | [EMBED] Generated embedding for face_id=face_0001
-2026-03-21 10:00:01 | INFO     | EventLogger             | [ENTRY] face_id=face_0001 | frame=1 | status=NEW
-2026-03-21 10:00:16 | INFO     | EventLogger             | [ENTRY] face_id=face_0002 | frame=31 | status=NEW
-2026-03-21 10:02:01 | INFO     | EventLogger             | [EXIT]  face_id=face_0001 | frame=241
-2026-03-21 10:02:16 | INFO     | EventLogger             | [EXIT]  face_id=face_0002 | frame=271
-2026-03-21 10:05:00 | INFO     | EventLogger             | [SUMMARY] Session ended | unique_visitors=5 | total_events=10
-```
+### main.py
+<img width="869" height="301" alt="Screenshot 2026-03-22 214244" src="https://github.com/user-attachments/assets/61018f0f-bf60-48b2-9802-3f05492442f3" />
+<img width="1622" height="719" alt="Screenshot 2026-03-22 214048" src="https://github.com/user-attachments/assets/7b15ffda-0bfd-43f3-89dc-f73ce4f9330f" />
+<img width="1062" height="588" alt="Screenshot 2026-03-22 214156" src="https://github.com/user-attachments/assets/12ebd61e-61b5-4dca-88eb-d9859611d672" />
 
-### Database — `faces` table (excerpt)
-```
-face_uuid  | first_seen           | last_seen            | visit_count
-face_0001  | 2026-03-21T10:00:01 | 2026-03-21T10:02:01  | 1
-face_0002  | 2026-03-21T10:00:16 | 2026-03-21T10:02:16  | 1
-face_0003  | 2026-03-21T10:00:31 | 2026-03-21T10:02:31  | 1
-```
 
-### Database — `events` table (excerpt)
-```
-face_uuid  | event_type | timestamp            | image_path
-face_0001  | entry      | 2026-03-21T10:00:01 | logs/entries/2026-03-21/face_0001_entry.jpg
-face_0001  | exit       | 2026-03-21T10:02:01 | logs/exits/2026-03-21/face_0001_exit.jpg
-face_0002  | entry      | 2026-03-21T10:00:16 | logs/entries/2026-03-21/face_0002_entry.jpg
-```
+### `logs/events.log` 
+<img width="1690" height="606" alt="Screenshot 2026-03-22 214419" src="https://github.com/user-attachments/assets/c4e77a7d-3b5d-4755-bc50-f632e6a1fcfa" />
+
+
+### Database
+<img width="1456" height="490" alt="Screenshot 2026-03-22 214501" src="https://github.com/user-attachments/assets/544c232b-89a1-459f-bea5-6c840559c844" />
+
+
+### Dashboard
+<img width="1888" height="876" alt="Screenshot 2026-03-22 214538" src="https://github.com/user-attachments/assets/f62048ce-4f0a-4a88-8df3-48de8e7e8879" />
 
 ---
 
@@ -350,7 +341,7 @@ The problem was decomposed into 5 functional layers:
 
 ## 🎥 Demo Video
 
-> **[Insert your Loom / YouTube link here before submission]**
+> **[https://www.loom.com/share/1433246343c044fcac106cf4138073b6]**
 
 ---
 
