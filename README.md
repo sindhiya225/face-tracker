@@ -1,4 +1,4 @@
-# 🎭 Intelligent Face Tracker with Auto-Registration & Visitor Counting
+#  Intelligent Face Tracker with Auto-Registration & Visitor Counting
 
 ---
 
