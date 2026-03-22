@@ -1,0 +1,38 @@
+# ──────────────────────────────────────────────────
+# Face Tracker — Python Dependencies
+# ──────────────────────────────────────────────────
+
+# Core CV & ML
+opencv-python>=4.8.0
+numpy>=1.24.0
+
+# YOLO face detection
+ultralytics>=8.0.0
+
+# Face recognition (InsightFace / ArcFace)
+insightface>=0.7.3
+onnxruntime>=1.16.0          # CPU inference for InsightFace
+# onnxruntime-gpu>=1.16.0    # Uncomment for GPU inference
+
+# Deep learning backend (needed by InsightFace)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Database
+# sqlite3 is included in Python stdlib — no extra install needed
+
+# Utilities
+Pillow>=10.0.0
+tqdm>=4.65.0
+requests>=2.31.0
+
+# Optional: GPU acceleration
+# cupy-cuda12x>=12.0.0       # Uncomment for CUDA 12
+
+# Optional: Frontend dashboard
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# Optional: Advanced tracking (DeepSort / ByteTrack)
+# deep-sort-realtime>=1.3.2  # Uncomment to use DeepSort
+# lapx>=0.5.4                # Needed by ByteTrack

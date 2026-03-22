@@ -1,0 +1,507 @@
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | Database schema initialized.
+2026-03-21 14:04:58 | INFO     | database.db_manager       | DatabaseManager initialized with DB: face_tracker.db
+2026-03-21 14:04:58 | INFO     | EventLogger               | EventLogger initialized. Image store: logs
+2026-03-21 14:04:58 | INFO     | __main__                  | [SYSTEM] Sample output generation started.
+2026-03-21 14:04:58 | INFO     | database.db_manager       | [DB] Registered new face: face_0001
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: entry for face_0001 @ 2026-03-21T10:00:00
+2026-03-21 14:04:58 | INFO     | EventLogger               | [ENTRY] face_id=face_0001 | frame=1 | status=NEW
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: exit for face_0001 @ 2026-03-21T10:02:00
+2026-03-21 14:04:58 | INFO     | EventLogger               | [EXIT]  face_id=face_0001 | frame=240
+2026-03-21 14:04:58 | INFO     | database.db_manager       | [DB] Registered new face: face_0002
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: entry for face_0002 @ 2026-03-21T10:00:15
+2026-03-21 14:04:58 | INFO     | EventLogger               | [ENTRY] face_id=face_0002 | frame=31 | status=NEW
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: exit for face_0002 @ 2026-03-21T10:02:15
+2026-03-21 14:04:58 | INFO     | EventLogger               | [EXIT]  face_id=face_0002 | frame=270
+2026-03-21 14:04:58 | INFO     | database.db_manager       | [DB] Registered new face: face_0003
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: entry for face_0003 @ 2026-03-21T10:00:30
+2026-03-21 14:04:58 | INFO     | EventLogger               | [ENTRY] face_id=face_0003 | frame=61 | status=NEW
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: exit for face_0003 @ 2026-03-21T10:02:30
+2026-03-21 14:04:58 | INFO     | EventLogger               | [EXIT]  face_id=face_0003 | frame=300
+2026-03-21 14:04:58 | INFO     | database.db_manager       | [DB] Registered new face: face_0004
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: entry for face_0004 @ 2026-03-21T10:00:45
+2026-03-21 14:04:58 | INFO     | EventLogger               | [ENTRY] face_id=face_0004 | frame=91 | status=NEW
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: exit for face_0004 @ 2026-03-21T10:02:45
+2026-03-21 14:04:58 | INFO     | EventLogger               | [EXIT]  face_id=face_0004 | frame=330
+2026-03-21 14:04:58 | INFO     | database.db_manager       | [DB] Registered new face: face_0005
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: entry for face_0005 @ 2026-03-21T10:01:00
+2026-03-21 14:04:58 | INFO     | EventLogger               | [ENTRY] face_id=face_0005 | frame=121 | status=NEW
+2026-03-21 14:04:58 | DEBUG    | database.db_manager       | [DB] Event logged: exit for face_0005 @ 2026-03-21T10:03:00
+2026-03-21 14:04:58 | INFO     | EventLogger               | [EXIT]  face_id=face_0005 | frame=360
+2026-03-21 14:04:58 | INFO     | database.db_manager       | [DB] Session 1 ended. Unique visitors: 5
+2026-03-21 14:04:58 | INFO     | __main__                  | [SYSTEM] Sample generation complete. Summary: {'unique_visitors': 5, 'total_events': 10, 'entry_events': 5, 'exit_events': 5}
+2026-03-21 14:04:58 | INFO     | database.db_manager       | [DB] Connection closed.
+2026-03-21 23:25:16 | INFO     | __main__                  | [Main] Face Tracker starting up.
+2026-03-21 23:25:22 | INFO     | core.face_detector        | [Detector] Downloading face model from https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-face.pt ...
+2026-03-21 23:25:23 | WARNING  | core.face_detector        | [Detector] Mirror failed (https://github.com/akanametov/yolov8-face/releases/download/v0.0.0/yolov8n-face.pt): HTTP Error 404: Not Found
+2026-03-21 23:25:23 | INFO     | core.face_detector        | [Detector] Downloading face model from https://huggingface.co/arnabdhar/YOLOv8-Face-Detection/resolve/main/model.pt ...
+2026-03-21 23:25:25 | INFO     | core.face_detector        | [Detector] Downloaded: yolov8n-face.pt
+2026-03-21 23:25:25 | INFO     | core.face_detector        | [Detector] YOLOv8 face model loaded: yolov8n-face.pt
+2026-03-21 23:25:30 | INFO     | core.face_recognizer      | [Recognizer] InsightFace model loaded: buffalo_l
+2026-03-21 23:25:30 | INFO     | core.face_tracker         | [Tracker] Initialized (max_disappeared=45, iou_threshold=0.3)
+2026-03-21 23:25:30 | INFO     | database.db_manager       | DatabaseManager initialized with DB: face_tracker.db
+2026-03-21 23:25:30 | INFO     | EventLogger               | EventLogger initialized. Image store: logs
+2026-03-21 23:25:30 | INFO     | core.pipeline             | [Pipeline] FaceTrackingPipeline initialized.
+2026-03-21 23:25:30 | INFO     | __main__                  | [Main] Opening file: sample_video.mp4
+2026-03-21 23:25:30 | INFO     | EventLogger               | [SYSTEM] Session started. Source: sample_video.mp4
+2026-03-21 23:25:30 | INFO     | core.pipeline             | [Pipeline] Session 5 started for: sample_video.mp4
+2026-03-21 23:25:30 | INFO     | __main__                  | [Main] Starting main loop...
+2026-03-21 23:25:31 | INFO     | database.db_manager       | [DB] Registered new face: 80781916
+2026-03-21 23:25:31 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=1 | status=NEW
+2026-03-21 23:25:32 | INFO     | database.db_manager       | [DB] Registered new face: 0c6a157d
+2026-03-21 23:25:32 | INFO     | EventLogger               | [ENTRY] face_id=0c6a157d | frame=1 | status=NEW
+2026-03-21 23:25:33 | INFO     | database.db_manager       | [DB] Registered new face: a8c6b2f9
+2026-03-21 23:25:33 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=1 | status=NEW
+2026-03-21 23:25:34 | INFO     | database.db_manager       | [DB] Registered new face: 341b14b5
+2026-03-21 23:25:34 | INFO     | EventLogger               | [ENTRY] face_id=341b14b5 | frame=3 | status=NEW
+2026-03-21 23:25:35 | INFO     | database.db_manager       | [DB] Registered new face: 2ca9f02e
+2026-03-21 23:25:35 | INFO     | EventLogger               | [ENTRY] face_id=2ca9f02e | frame=3 | status=NEW
+2026-03-21 23:25:36 | INFO     | database.db_manager       | [DB] Registered new face: a1331423
+2026-03-21 23:25:36 | INFO     | EventLogger               | [ENTRY] face_id=a1331423 | frame=6 | status=NEW
+2026-03-21 23:25:41 | INFO     | database.db_manager       | [DB] Registered new face: b099a05c
+2026-03-21 23:25:41 | INFO     | EventLogger               | [ENTRY] face_id=b099a05c | frame=30 | status=NEW
+2026-03-21 23:25:42 | INFO     | database.db_manager       | [DB] Registered new face: 1bb41286
+2026-03-21 23:25:42 | INFO     | EventLogger               | [ENTRY] face_id=1bb41286 | frame=30 | status=NEW
+2026-03-21 23:25:44 | INFO     | database.db_manager       | [DB] Registered new face: 3c82c416
+2026-03-21 23:25:44 | INFO     | EventLogger               | [ENTRY] face_id=3c82c416 | frame=39 | status=NEW
+2026-03-21 23:25:45 | INFO     | database.db_manager       | [DB] Registered new face: 9a71f9a0
+2026-03-21 23:25:45 | INFO     | EventLogger               | [ENTRY] face_id=9a71f9a0 | frame=39 | status=NEW
+2026-03-21 23:25:48 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=47
+2026-03-21 23:25:48 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=47
+2026-03-21 23:25:49 | INFO     | EventLogger               | [EXIT]  face_id=341b14b5 | frame=49
+2026-03-21 23:25:51 | INFO     | database.db_manager       | [DB] Registered new face: 0a66f0c2
+2026-03-21 23:25:51 | INFO     | EventLogger               | [ENTRY] face_id=0a66f0c2 | frame=54 | status=NEW
+2026-03-21 23:25:52 | INFO     | database.db_manager       | [DB] Registered new face: bffcff24
+2026-03-21 23:25:52 | INFO     | EventLogger               | [ENTRY] face_id=bffcff24 | frame=57 | status=NEW
+2026-03-21 23:25:54 | INFO     | database.db_manager       | [DB] Registered new face: 64678f2f
+2026-03-21 23:25:54 | INFO     | EventLogger               | [ENTRY] face_id=64678f2f | frame=57 | status=NEW
+2026-03-21 23:25:55 | INFO     | database.db_manager       | [DB] Registered new face: cc704d6b
+2026-03-21 23:25:55 | INFO     | EventLogger               | [ENTRY] face_id=cc704d6b | frame=60 | status=NEW
+2026-03-21 23:26:02 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=75 | status=RETURNING
+2026-03-21 23:26:03 | INFO     | EventLogger               | [EXIT]  face_id=1bb41286 | frame=76
+2026-03-21 23:26:03 | INFO     | database.db_manager       | [DB] Registered new face: cce24498
+2026-03-21 23:26:03 | INFO     | EventLogger               | [ENTRY] face_id=cce24498 | frame=78 | status=NEW
+2026-03-21 23:26:12 | INFO     | database.db_manager       | [DB] Registered new face: 30dac6e3
+2026-03-21 23:26:12 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=93 | status=NEW
+2026-03-21 23:26:13 | INFO     | database.db_manager       | [DB] Registered new face: 075cf1f5
+2026-03-21 23:26:13 | INFO     | EventLogger               | [ENTRY] face_id=075cf1f5 | frame=96 | status=NEW
+2026-03-21 23:26:13 | INFO     | database.db_manager       | [DB] Registered new face: 54a6eb8f
+2026-03-21 23:26:13 | INFO     | EventLogger               | [ENTRY] face_id=54a6eb8f | frame=96 | status=NEW
+2026-03-21 23:26:15 | INFO     | EventLogger               | [EXIT]  face_id=0a66f0c2 | frame=100
+2026-03-21 23:26:17 | INFO     | EventLogger               | [EXIT]  face_id=b099a05c | frame=103
+2026-03-21 23:26:17 | INFO     | EventLogger               | [EXIT]  face_id=64678f2f | frame=103
+2026-03-21 23:26:19 | INFO     | database.db_manager       | [DB] Registered new face: 3eaf9fe3
+2026-03-21 23:26:19 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=105 | status=NEW
+2026-03-21 23:26:19 | INFO     | EventLogger               | [EXIT]  face_id=cc704d6b | frame=106
+2026-03-21 23:26:22 | INFO     | EventLogger               | [EXIT]  face_id=3c82c416 | frame=109
+2026-03-21 23:26:29 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=121
+2026-03-21 23:26:34 | INFO     | database.db_manager       | [DB] Registered new face: d695d870
+2026-03-21 23:26:34 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=129 | status=NEW
+2026-03-21 23:26:38 | INFO     | EventLogger               | [EXIT]  face_id=bffcff24 | frame=139
+2026-03-21 23:26:38 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=139
+2026-03-21 23:26:38 | INFO     | database.db_manager       | [DB] Registered new face: 7e2633c1
+2026-03-21 23:26:38 | INFO     | EventLogger               | [ENTRY] face_id=7e2633c1 | frame=141 | status=NEW
+2026-03-21 23:26:40 | INFO     | database.db_manager       | [DB] Registered new face: 4ea52770
+2026-03-21 23:26:40 | INFO     | EventLogger               | [ENTRY] face_id=4ea52770 | frame=144 | status=NEW
+2026-03-21 23:26:42 | INFO     | database.db_manager       | [DB] Registered new face: ec7c927d
+2026-03-21 23:26:42 | INFO     | EventLogger               | [ENTRY] face_id=ec7c927d | frame=150 | status=NEW
+2026-03-21 23:26:44 | INFO     | EventLogger               | [EXIT]  face_id=cce24498 | frame=154
+2026-03-21 23:26:46 | INFO     | EventLogger               | [EXIT]  face_id=2ca9f02e | frame=163
+2026-03-21 23:26:47 | INFO     | EventLogger               | [EXIT]  face_id=0c6a157d | frame=169
+2026-03-21 23:26:48 | INFO     | database.db_manager       | [DB] Registered new face: 514629e5
+2026-03-21 23:26:48 | INFO     | EventLogger               | [ENTRY] face_id=514629e5 | frame=174 | status=NEW
+2026-03-21 23:26:48 | INFO     | EventLogger               | [EXIT]  face_id=a1331423 | frame=175
+2026-03-21 23:26:48 | INFO     | EventLogger               | [EXIT]  face_id=9a71f9a0 | frame=175
+2026-03-21 23:26:48 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=175
+2026-03-21 23:26:49 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=178
+2026-03-21 23:26:53 | INFO     | EventLogger               | [EXIT]  face_id=4ea52770 | frame=190
+2026-03-21 23:26:56 | INFO     | EventLogger               | [EXIT]  face_id=075cf1f5 | frame=196
+2026-03-21 23:26:58 | INFO     | database.db_manager       | [DB] Registered new face: 314d5ccf
+2026-03-21 23:26:58 | INFO     | EventLogger               | [ENTRY] face_id=314d5ccf | frame=201 | status=NEW
+2026-03-21 23:27:01 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=207 | status=RETURNING
+2026-03-21 23:27:03 | INFO     | database.db_manager       | [DB] Registered new face: 2d9819bb
+2026-03-21 23:27:03 | INFO     | EventLogger               | [ENTRY] face_id=2d9819bb | frame=210 | status=NEW
+2026-03-21 23:27:04 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=216 | status=RETURNING
+2026-03-21 23:27:06 | INFO     | database.db_manager       | [DB] Registered new face: f980bdfa
+2026-03-21 23:27:06 | INFO     | EventLogger               | [ENTRY] face_id=f980bdfa | frame=222 | status=NEW
+2026-03-21 23:27:06 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=222 | status=RETURNING
+2026-03-21 23:27:07 | INFO     | database.db_manager       | [DB] Registered new face: d328cd65
+2026-03-21 23:27:07 | INFO     | EventLogger               | [ENTRY] face_id=d328cd65 | frame=225 | status=NEW
+2026-03-21 23:27:10 | INFO     | database.db_manager       | [DB] Registered new face: 1f184ed3
+2026-03-21 23:27:10 | INFO     | EventLogger               | [ENTRY] face_id=1f184ed3 | frame=231 | status=NEW
+2026-03-21 23:27:12 | INFO     | database.db_manager       | [DB] Registered new face: 73756598
+2026-03-21 23:27:12 | INFO     | EventLogger               | [ENTRY] face_id=73756598 | frame=234 | status=NEW
+2026-03-21 23:27:13 | INFO     | database.db_manager       | [DB] Registered new face: df033a8b
+2026-03-21 23:27:13 | INFO     | EventLogger               | [ENTRY] face_id=df033a8b | frame=237 | status=NEW
+2026-03-21 23:27:15 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=237 | status=RETURNING
+2026-03-21 23:27:15 | INFO     | EventLogger               | [EXIT]  face_id=7e2633c1 | frame=238
+2026-03-21 23:27:17 | INFO     | __main__                  | [Main] End of stream or read error. Stopping.
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=54a6eb8f | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=514629e5 | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=d328cd65 | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=1f184ed3 | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=73756598 | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=f980bdfa | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=df033a8b | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=2d9819bb | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=ec7c927d | frame=240
+2026-03-21 23:27:17 | INFO     | EventLogger               | [EXIT]  face_id=314d5ccf | frame=240
+2026-03-21 23:27:17 | INFO     | database.db_manager       | [DB] Session 5 ended. Unique visitors: 36
+2026-03-21 23:27:17 | INFO     | EventLogger               | [SUMMARY] Session ended | unique_visitors=36 | total_events=82
+2026-03-21 23:27:17 | INFO     | core.pipeline             | [Pipeline] Session ended. Summary: {'unique_visitors': 36, 'total_events': 82, 'entry_events': 41, 'exit_events': 41}
+2026-03-21 23:27:17 | INFO     | database.db_manager       | [DB] Connection closed.
+2026-03-22 19:43:22 | INFO     | __main__                  | [Main] Face Tracker starting up.
+2026-03-22 19:43:30 | INFO     | core.face_detector        | [Detector] YOLOv8 face model loaded: yolov8n-face.pt
+2026-03-22 19:43:39 | INFO     | core.face_recognizer      | [Recognizer] InsightFace model loaded: buffalo_l
+2026-03-22 19:43:39 | INFO     | core.face_tracker         | [Tracker] Initialized (max_disappeared=45, iou_threshold=0.3)
+2026-03-22 19:43:39 | INFO     | database.db_manager       | DatabaseManager initialized with DB: face_tracker.db
+2026-03-22 19:43:39 | INFO     | EventLogger               | EventLogger initialized. Image store: logs
+2026-03-22 19:43:39 | INFO     | core.pipeline             | [Pipeline] FaceTrackingPipeline initialized.
+2026-03-22 19:43:39 | INFO     | __main__                  | [Main] Opening file: sample_video.mp4
+2026-03-22 19:43:39 | INFO     | EventLogger               | [SYSTEM] Session started. Source: sample_video.mp4
+2026-03-22 19:43:39 | INFO     | core.pipeline             | [Pipeline] Session 6 started for: sample_video.mp4
+2026-03-22 19:43:39 | INFO     | __main__                  | [Main] Starting main loop...
+2026-03-22 19:43:41 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=1 | status=RETURNING
+2026-03-22 19:43:41 | INFO     | EventLogger               | [ENTRY] face_id=0c6a157d | frame=1 | status=RETURNING
+2026-03-22 19:43:42 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=1 | status=RETURNING
+2026-03-22 19:43:43 | INFO     | EventLogger               | [ENTRY] face_id=341b14b5 | frame=3 | status=RETURNING
+2026-03-22 19:43:44 | INFO     | EventLogger               | [ENTRY] face_id=2ca9f02e | frame=3 | status=RETURNING
+2026-03-22 19:43:44 | INFO     | EventLogger               | [ENTRY] face_id=a1331423 | frame=6 | status=RETURNING
+2026-03-22 19:43:52 | INFO     | EventLogger               | [ENTRY] face_id=b099a05c | frame=30 | status=RETURNING
+2026-03-22 19:43:53 | INFO     | EventLogger               | [ENTRY] face_id=1bb41286 | frame=30 | status=RETURNING
+2026-03-22 19:43:55 | INFO     | EventLogger               | [ENTRY] face_id=3c82c416 | frame=39 | status=RETURNING
+2026-03-22 19:43:55 | INFO     | EventLogger               | [ENTRY] face_id=9a71f9a0 | frame=39 | status=RETURNING
+2026-03-22 19:43:58 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=47
+2026-03-22 19:43:58 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=47
+2026-03-22 19:43:59 | INFO     | EventLogger               | [EXIT]  face_id=341b14b5 | frame=49
+2026-03-22 19:44:01 | INFO     | EventLogger               | [ENTRY] face_id=0a66f0c2 | frame=54 | status=RETURNING
+2026-03-22 19:44:02 | INFO     | EventLogger               | [ENTRY] face_id=bffcff24 | frame=57 | status=RETURNING
+2026-03-22 19:44:04 | INFO     | EventLogger               | [ENTRY] face_id=64678f2f | frame=57 | status=RETURNING
+2026-03-22 19:44:05 | INFO     | EventLogger               | [ENTRY] face_id=cc704d6b | frame=60 | status=RETURNING
+2026-03-22 19:44:12 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=75 | status=RETURNING
+2026-03-22 19:44:12 | INFO     | EventLogger               | [EXIT]  face_id=1bb41286 | frame=76
+2026-03-22 19:44:13 | INFO     | EventLogger               | [ENTRY] face_id=cce24498 | frame=78 | status=RETURNING
+2026-03-22 19:44:22 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=93 | status=RETURNING
+2026-03-22 19:44:23 | INFO     | EventLogger               | [ENTRY] face_id=075cf1f5 | frame=96 | status=RETURNING
+2026-03-22 19:44:23 | INFO     | EventLogger               | [ENTRY] face_id=54a6eb8f | frame=96 | status=RETURNING
+2026-03-22 19:44:25 | INFO     | EventLogger               | [EXIT]  face_id=0a66f0c2 | frame=100
+2026-03-22 19:44:27 | INFO     | EventLogger               | [EXIT]  face_id=b099a05c | frame=103
+2026-03-22 19:44:27 | INFO     | EventLogger               | [EXIT]  face_id=64678f2f | frame=103
+2026-03-22 19:44:29 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=105 | status=RETURNING
+2026-03-22 19:44:29 | INFO     | EventLogger               | [EXIT]  face_id=cc704d6b | frame=106
+2026-03-22 19:44:32 | INFO     | EventLogger               | [EXIT]  face_id=3c82c416 | frame=109
+2026-03-22 19:44:40 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=121
+2026-03-22 19:44:41 | INFO     | EventLogger               | [ENTRY] face_id=7e2633c1 | frame=123 | status=RETURNING
+2026-03-22 19:44:44 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=129 | status=RETURNING
+2026-03-22 19:44:48 | INFO     | EventLogger               | [EXIT]  face_id=bffcff24 | frame=139
+2026-03-22 19:44:48 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=139
+2026-03-22 19:44:51 | INFO     | EventLogger               | [ENTRY] face_id=4ea52770 | frame=144 | status=RETURNING
+2026-03-22 19:44:52 | INFO     | EventLogger               | [ENTRY] face_id=ec7c927d | frame=150 | status=RETURNING
+2026-03-22 19:44:55 | INFO     | EventLogger               | [EXIT]  face_id=0c6a157d | frame=154
+2026-03-22 19:44:55 | INFO     | EventLogger               | [EXIT]  face_id=cce24498 | frame=154
+2026-03-22 19:44:57 | INFO     | EventLogger               | [EXIT]  face_id=2ca9f02e | frame=163
+2026-03-22 19:45:02 | INFO     | EventLogger               | [ENTRY] face_id=514629e5 | frame=174 | status=RETURNING
+2026-03-22 19:45:02 | INFO     | EventLogger               | [EXIT]  face_id=a1331423 | frame=175
+2026-03-22 19:45:02 | INFO     | EventLogger               | [EXIT]  face_id=9a71f9a0 | frame=175
+2026-03-22 19:45:02 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=175
+2026-03-22 19:45:03 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=178
+2026-03-22 19:45:09 | INFO     | EventLogger               | [EXIT]  face_id=4ea52770 | frame=190
+2026-03-22 19:45:11 | INFO     | EventLogger               | [EXIT]  face_id=075cf1f5 | frame=196
+2026-03-22 19:45:13 | INFO     | EventLogger               | [ENTRY] face_id=314d5ccf | frame=201 | status=RETURNING
+2026-03-22 19:45:16 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=207 | status=RETURNING
+2026-03-22 19:45:18 | INFO     | EventLogger               | [ENTRY] face_id=2d9819bb | frame=210 | status=RETURNING
+2026-03-22 19:45:19 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=216 | status=RETURNING
+2026-03-22 19:45:21 | INFO     | EventLogger               | [ENTRY] face_id=f980bdfa | frame=222 | status=RETURNING
+2026-03-22 19:45:21 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=222 | status=RETURNING
+2026-03-22 19:45:22 | INFO     | EventLogger               | [ENTRY] face_id=d328cd65 | frame=225 | status=RETURNING
+2026-03-22 19:45:25 | INFO     | EventLogger               | [ENTRY] face_id=1f184ed3 | frame=231 | status=RETURNING
+2026-03-22 19:45:26 | INFO     | EventLogger               | [ENTRY] face_id=73756598 | frame=234 | status=RETURNING
+2026-03-22 19:45:28 | INFO     | EventLogger               | [ENTRY] face_id=df033a8b | frame=237 | status=RETURNING
+2026-03-22 19:45:30 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=237 | status=RETURNING
+2026-03-22 19:45:30 | INFO     | EventLogger               | [EXIT]  face_id=7e2633c1 | frame=238
+2026-03-22 19:45:32 | INFO     | __main__                  | [Main] End of stream or read error. Stopping.
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=54a6eb8f | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=73756598 | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=ec7c927d | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=df033a8b | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=d328cd65 | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=314d5ccf | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=2d9819bb | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=f980bdfa | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=1f184ed3 | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=514629e5 | frame=240
+2026-03-22 19:45:32 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=240
+2026-03-22 19:45:32 | INFO     | database.db_manager       | [DB] Session 6 ended. Unique visitors: 36
+2026-03-22 19:45:32 | INFO     | EventLogger               | [SUMMARY] Session ended | unique_visitors=36 | total_events=154
+2026-03-22 19:45:32 | INFO     | core.pipeline             | [Pipeline] Session ended. Summary: {'unique_visitors': 36, 'total_events': 154, 'entry_events': 77, 'exit_events': 77}
+2026-03-22 19:45:32 | INFO     | database.db_manager       | [DB] Connection closed.
+2026-03-22 19:50:36 | INFO     | __main__                  | [Main] Face Tracker starting up.
+2026-03-22 19:50:40 | INFO     | core.face_detector        | [Detector] YOLOv8 face model loaded: yolov8n-face.pt
+2026-03-22 19:50:43 | INFO     | core.face_recognizer      | [Recognizer] InsightFace model loaded: buffalo_l
+2026-03-22 19:50:43 | INFO     | core.face_tracker         | [Tracker] Initialized (max_disappeared=45, iou_threshold=0.3)
+2026-03-22 19:50:43 | INFO     | database.db_manager       | DatabaseManager initialized with DB: face_tracker.db
+2026-03-22 19:50:43 | INFO     | EventLogger               | EventLogger initialized. Image store: logs
+2026-03-22 19:50:43 | INFO     | core.pipeline             | [Pipeline] FaceTrackingPipeline initialized.
+2026-03-22 19:50:43 | INFO     | __main__                  | [Main] Opening file: sample_video.mp4
+2026-03-22 19:50:43 | INFO     | EventLogger               | [SYSTEM] Session started. Source: sample_video.mp4
+2026-03-22 19:50:43 | INFO     | core.pipeline             | [Pipeline] Session 7 started for: sample_video.mp4
+2026-03-22 19:50:43 | INFO     | __main__                  | [Main] Starting main loop...
+2026-03-22 19:50:44 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=1 | status=RETURNING
+2026-03-22 19:50:45 | INFO     | EventLogger               | [ENTRY] face_id=0c6a157d | frame=1 | status=RETURNING
+2026-03-22 19:50:45 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=1 | status=RETURNING
+2026-03-22 19:50:46 | INFO     | EventLogger               | [ENTRY] face_id=341b14b5 | frame=3 | status=RETURNING
+2026-03-22 19:50:47 | INFO     | EventLogger               | [ENTRY] face_id=2ca9f02e | frame=3 | status=RETURNING
+2026-03-22 19:50:48 | INFO     | EventLogger               | [ENTRY] face_id=a1331423 | frame=6 | status=RETURNING
+2026-03-22 19:50:57 | INFO     | EventLogger               | [ENTRY] face_id=b099a05c | frame=30 | status=RETURNING
+2026-03-22 19:51:00 | INFO     | EventLogger               | [ENTRY] face_id=1bb41286 | frame=30 | status=RETURNING
+2026-03-22 19:51:02 | INFO     | EventLogger               | [ENTRY] face_id=3c82c416 | frame=39 | status=RETURNING
+2026-03-22 19:51:03 | INFO     | EventLogger               | [ENTRY] face_id=9a71f9a0 | frame=39 | status=RETURNING
+2026-03-22 19:51:06 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=47
+2026-03-22 19:51:06 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=47
+2026-03-22 19:51:08 | INFO     | EventLogger               | [EXIT]  face_id=341b14b5 | frame=49
+2026-03-22 19:51:12 | INFO     | EventLogger               | [ENTRY] face_id=0a66f0c2 | frame=54 | status=RETURNING
+2026-03-22 19:51:14 | INFO     | EventLogger               | [ENTRY] face_id=bffcff24 | frame=57 | status=RETURNING
+2026-03-22 19:51:18 | INFO     | EventLogger               | [ENTRY] face_id=64678f2f | frame=57 | status=RETURNING
+2026-03-22 19:51:20 | INFO     | EventLogger               | [ENTRY] face_id=cc704d6b | frame=60 | status=RETURNING
+2026-03-22 19:51:33 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=75 | status=RETURNING
+2026-03-22 19:51:33 | INFO     | EventLogger               | [EXIT]  face_id=1bb41286 | frame=76
+2026-03-22 19:51:35 | INFO     | EventLogger               | [ENTRY] face_id=cce24498 | frame=78 | status=RETURNING
+2026-03-22 19:51:54 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=93 | status=RETURNING
+2026-03-22 19:51:56 | INFO     | EventLogger               | [ENTRY] face_id=075cf1f5 | frame=96 | status=RETURNING
+2026-03-22 19:51:57 | INFO     | EventLogger               | [ENTRY] face_id=54a6eb8f | frame=96 | status=RETURNING
+2026-03-22 19:52:01 | INFO     | EventLogger               | [EXIT]  face_id=0a66f0c2 | frame=100
+2026-03-22 19:52:04 | INFO     | EventLogger               | [EXIT]  face_id=b099a05c | frame=103
+2026-03-22 19:52:04 | INFO     | EventLogger               | [EXIT]  face_id=64678f2f | frame=103
+2026-03-22 19:52:08 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=105 | status=RETURNING
+2026-03-22 19:52:08 | INFO     | EventLogger               | [EXIT]  face_id=cc704d6b | frame=106
+2026-03-22 19:52:15 | INFO     | EventLogger               | [EXIT]  face_id=3c82c416 | frame=109
+2026-03-22 19:52:24 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=121
+2026-03-22 19:52:26 | INFO     | EventLogger               | [ENTRY] face_id=7e2633c1 | frame=123 | status=RETURNING
+2026-03-22 19:52:33 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=129 | status=RETURNING
+2026-03-22 19:52:42 | INFO     | EventLogger               | [EXIT]  face_id=bffcff24 | frame=139
+2026-03-22 19:52:42 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=139
+2026-03-22 19:52:49 | INFO     | EventLogger               | [ENTRY] face_id=4ea52770 | frame=144 | status=RETURNING
+2026-03-22 19:52:51 | INFO     | EventLogger               | [ENTRY] face_id=ec7c927d | frame=150 | status=RETURNING
+2026-03-22 19:52:56 | INFO     | EventLogger               | [EXIT]  face_id=0c6a157d | frame=154
+2026-03-22 19:52:56 | INFO     | EventLogger               | [EXIT]  face_id=cce24498 | frame=154
+2026-03-22 19:53:00 | INFO     | EventLogger               | [EXIT]  face_id=2ca9f02e | frame=163
+2026-03-22 19:53:05 | INFO     | EventLogger               | [ENTRY] face_id=514629e5 | frame=174 | status=RETURNING
+2026-03-22 19:53:05 | INFO     | EventLogger               | [EXIT]  face_id=a1331423 | frame=175
+2026-03-22 19:53:05 | INFO     | EventLogger               | [EXIT]  face_id=9a71f9a0 | frame=175
+2026-03-22 19:53:05 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=175
+2026-03-22 19:53:07 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=178
+2026-03-22 19:53:16 | INFO     | EventLogger               | [EXIT]  face_id=4ea52770 | frame=190
+2026-03-22 19:53:22 | INFO     | EventLogger               | [EXIT]  face_id=075cf1f5 | frame=196
+2026-03-22 19:53:26 | INFO     | EventLogger               | [ENTRY] face_id=314d5ccf | frame=201 | status=RETURNING
+2026-03-22 19:53:33 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=207 | status=RETURNING
+2026-03-22 19:53:36 | INFO     | EventLogger               | [ENTRY] face_id=2d9819bb | frame=210 | status=RETURNING
+2026-03-22 19:53:40 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=216 | status=RETURNING
+2026-03-22 19:53:43 | INFO     | EventLogger               | [ENTRY] face_id=f980bdfa | frame=222 | status=RETURNING
+2026-03-22 19:53:44 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=222 | status=RETURNING
+2026-03-22 19:53:46 | INFO     | EventLogger               | [ENTRY] face_id=d328cd65 | frame=225 | status=RETURNING
+2026-03-22 19:53:53 | INFO     | EventLogger               | [ENTRY] face_id=1f184ed3 | frame=231 | status=RETURNING
+2026-03-22 19:53:55 | INFO     | EventLogger               | [ENTRY] face_id=73756598 | frame=234 | status=RETURNING
+2026-03-22 19:53:57 | INFO     | EventLogger               | [ENTRY] face_id=df033a8b | frame=237 | status=RETURNING
+2026-03-22 19:53:58 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=237 | status=RETURNING
+2026-03-22 19:53:58 | INFO     | EventLogger               | [EXIT]  face_id=7e2633c1 | frame=238
+2026-03-22 19:54:00 | INFO     | __main__                  | [Main] End of stream or read error. Stopping.
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=314d5ccf | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=d328cd65 | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=73756598 | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=df033a8b | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=514629e5 | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=f980bdfa | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=1f184ed3 | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=54a6eb8f | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=2d9819bb | frame=240
+2026-03-22 19:54:00 | INFO     | EventLogger               | [EXIT]  face_id=ec7c927d | frame=240
+2026-03-22 19:54:00 | INFO     | database.db_manager       | [DB] Session 7 ended. Unique visitors: 36
+2026-03-22 19:54:00 | INFO     | EventLogger               | [SUMMARY] Session ended | unique_visitors=36 | total_events=226
+2026-03-22 19:54:00 | INFO     | core.pipeline             | [Pipeline] Session ended. Summary: {'unique_visitors': 36, 'total_events': 226, 'entry_events': 113, 'exit_events': 113}
+2026-03-22 19:54:00 | INFO     | database.db_manager       | [DB] Connection closed.
+2026-03-22 20:33:29 | INFO     | __main__                  | [Main] Face Tracker starting up.
+2026-03-22 20:33:35 | INFO     | core.face_detector        | [Detector] YOLOv8 face model loaded: yolov8n-face.pt
+2026-03-22 20:33:41 | INFO     | core.face_recognizer      | [Recognizer] InsightFace model loaded: buffalo_l
+2026-03-22 20:33:41 | INFO     | core.face_tracker         | [Tracker] Initialized (max_disappeared=45, iou_threshold=0.3)
+2026-03-22 20:33:41 | INFO     | database.db_manager       | DatabaseManager initialized with DB: face_tracker.db
+2026-03-22 20:33:41 | INFO     | EventLogger               | EventLogger initialized. Image store: logs
+2026-03-22 20:33:41 | INFO     | core.pipeline             | [Pipeline] FaceTrackingPipeline initialized.
+2026-03-22 20:33:41 | INFO     | __main__                  | [Main] Opening file: sample_video.mp4
+2026-03-22 20:33:41 | INFO     | EventLogger               | [SYSTEM] Session started. Source: sample_video.mp4
+2026-03-22 20:33:41 | INFO     | core.pipeline             | [Pipeline] Session 8 started for: sample_video.mp4
+2026-03-22 20:33:41 | INFO     | __main__                  | [Main] Starting main loop...
+2026-03-22 20:33:42 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=1 | status=RETURNING
+2026-03-22 20:33:42 | INFO     | EventLogger               | [ENTRY] face_id=0c6a157d | frame=1 | status=RETURNING
+2026-03-22 20:33:43 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=1 | status=RETURNING
+2026-03-22 20:33:45 | INFO     | EventLogger               | [ENTRY] face_id=341b14b5 | frame=3 | status=RETURNING
+2026-03-22 20:33:47 | INFO     | EventLogger               | [ENTRY] face_id=2ca9f02e | frame=3 | status=RETURNING
+2026-03-22 20:33:49 | INFO     | EventLogger               | [ENTRY] face_id=a1331423 | frame=6 | status=RETURNING
+2026-03-22 20:34:01 | INFO     | EventLogger               | [ENTRY] face_id=b099a05c | frame=30 | status=RETURNING
+2026-03-22 20:34:02 | INFO     | EventLogger               | [ENTRY] face_id=1bb41286 | frame=30 | status=RETURNING
+2026-03-22 20:34:04 | INFO     | EventLogger               | [ENTRY] face_id=3c82c416 | frame=39 | status=RETURNING
+2026-03-22 20:34:05 | INFO     | EventLogger               | [ENTRY] face_id=9a71f9a0 | frame=39 | status=RETURNING
+2026-03-22 20:34:08 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=47
+2026-03-22 20:34:09 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=47
+2026-03-22 20:34:10 | INFO     | EventLogger               | [EXIT]  face_id=341b14b5 | frame=49
+2026-03-22 20:34:12 | INFO     | EventLogger               | [ENTRY] face_id=0a66f0c2 | frame=54 | status=RETURNING
+2026-03-22 20:34:13 | INFO     | EventLogger               | [ENTRY] face_id=bffcff24 | frame=57 | status=RETURNING
+2026-03-22 20:34:16 | INFO     | EventLogger               | [ENTRY] face_id=64678f2f | frame=57 | status=RETURNING
+2026-03-22 20:34:17 | INFO     | EventLogger               | [ENTRY] face_id=cc704d6b | frame=60 | status=RETURNING
+2026-03-22 20:34:26 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=75 | status=RETURNING
+2026-03-22 20:34:26 | INFO     | EventLogger               | [EXIT]  face_id=1bb41286 | frame=76
+2026-03-22 20:34:27 | INFO     | EventLogger               | [ENTRY] face_id=cce24498 | frame=78 | status=RETURNING
+2026-03-22 20:34:37 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=93 | status=RETURNING
+2026-03-22 20:34:38 | INFO     | EventLogger               | [ENTRY] face_id=075cf1f5 | frame=96 | status=RETURNING
+2026-03-22 20:34:39 | INFO     | EventLogger               | [ENTRY] face_id=54a6eb8f | frame=96 | status=RETURNING
+2026-03-22 20:34:41 | INFO     | EventLogger               | [EXIT]  face_id=0a66f0c2 | frame=100
+2026-03-22 20:34:43 | INFO     | EventLogger               | [EXIT]  face_id=b099a05c | frame=103
+2026-03-22 20:34:43 | INFO     | EventLogger               | [EXIT]  face_id=64678f2f | frame=103
+2026-03-22 20:34:45 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=105 | status=RETURNING
+2026-03-22 20:34:46 | INFO     | EventLogger               | [EXIT]  face_id=cc704d6b | frame=106
+2026-03-22 20:34:49 | INFO     | EventLogger               | [EXIT]  face_id=3c82c416 | frame=109
+2026-03-22 20:34:58 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=121
+2026-03-22 20:35:00 | INFO     | EventLogger               | [ENTRY] face_id=7e2633c1 | frame=123 | status=RETURNING
+2026-03-22 20:35:04 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=129 | status=RETURNING
+2026-03-22 20:35:08 | INFO     | EventLogger               | [EXIT]  face_id=bffcff24 | frame=139
+2026-03-22 20:35:08 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=139
+2026-03-22 20:35:12 | INFO     | EventLogger               | [ENTRY] face_id=4ea52770 | frame=144 | status=RETURNING
+2026-03-22 20:35:13 | INFO     | EventLogger               | [ENTRY] face_id=ec7c927d | frame=150 | status=RETURNING
+2026-03-22 20:35:16 | INFO     | EventLogger               | [EXIT]  face_id=0c6a157d | frame=154
+2026-03-22 20:35:16 | INFO     | EventLogger               | [EXIT]  face_id=cce24498 | frame=154
+2026-03-22 20:35:18 | INFO     | EventLogger               | [EXIT]  face_id=2ca9f02e | frame=163
+2026-03-22 20:35:22 | INFO     | EventLogger               | [ENTRY] face_id=514629e5 | frame=174 | status=RETURNING
+2026-03-22 20:35:22 | INFO     | EventLogger               | [EXIT]  face_id=a1331423 | frame=175
+2026-03-22 20:35:22 | INFO     | EventLogger               | [EXIT]  face_id=9a71f9a0 | frame=175
+2026-03-22 20:35:22 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=175
+2026-03-22 20:35:23 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=178
+2026-03-22 20:35:28 | INFO     | EventLogger               | [EXIT]  face_id=4ea52770 | frame=190
+2026-03-22 20:35:32 | INFO     | EventLogger               | [EXIT]  face_id=075cf1f5 | frame=196
+2026-03-22 20:35:35 | INFO     | EventLogger               | [ENTRY] face_id=314d5ccf | frame=201 | status=RETURNING
+2026-03-22 20:35:38 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=207 | status=RETURNING
+2026-03-22 20:35:40 | INFO     | EventLogger               | [ENTRY] face_id=2d9819bb | frame=210 | status=RETURNING
+2026-03-22 20:35:42 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=216 | status=RETURNING
+2026-03-22 20:35:44 | INFO     | EventLogger               | [ENTRY] face_id=f980bdfa | frame=222 | status=RETURNING
+2026-03-22 20:35:45 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=222 | status=RETURNING
+2026-03-22 20:35:46 | INFO     | EventLogger               | [ENTRY] face_id=d328cd65 | frame=225 | status=RETURNING
+2026-03-22 20:35:50 | INFO     | EventLogger               | [ENTRY] face_id=1f184ed3 | frame=231 | status=RETURNING
+2026-03-22 20:35:52 | INFO     | EventLogger               | [ENTRY] face_id=73756598 | frame=234 | status=RETURNING
+2026-03-22 20:35:54 | INFO     | EventLogger               | [ENTRY] face_id=df033a8b | frame=237 | status=RETURNING
+2026-03-22 20:35:56 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=237 | status=RETURNING
+2026-03-22 20:35:57 | INFO     | EventLogger               | [EXIT]  face_id=7e2633c1 | frame=238
+2026-03-22 20:35:59 | INFO     | __main__                  | [Main] End of stream or read error. Stopping.
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=df033a8b | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=514629e5 | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=314d5ccf | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=1f184ed3 | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=d328cd65 | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=54a6eb8f | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=f980bdfa | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=73756598 | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=2d9819bb | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=ec7c927d | frame=240
+2026-03-22 20:35:59 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=240
+2026-03-22 20:35:59 | INFO     | database.db_manager       | [DB] Session 8 ended. Unique visitors: 36
+2026-03-22 20:35:59 | INFO     | EventLogger               | [SUMMARY] Session ended | unique_visitors=36 | total_events=298
+2026-03-22 20:35:59 | INFO     | core.pipeline             | [Pipeline] Session ended. Summary: {'unique_visitors': 36, 'total_events': 298, 'entry_events': 149, 'exit_events': 149}
+2026-03-22 20:35:59 | INFO     | database.db_manager       | [DB] Connection closed.
+2026-03-22 21:40:19 | INFO     | __main__                  | [Main] Face Tracker starting up.
+2026-03-22 21:40:25 | INFO     | core.face_detector        | [Detector] YOLOv8 face model loaded: yolov8n-face.pt
+2026-03-22 21:40:30 | INFO     | core.face_recognizer      | [Recognizer] InsightFace model loaded: buffalo_l
+2026-03-22 21:40:30 | INFO     | core.face_tracker         | [Tracker] Initialized (max_disappeared=45, iou_threshold=0.3)
+2026-03-22 21:40:30 | INFO     | database.db_manager       | DatabaseManager initialized with DB: face_tracker.db
+2026-03-22 21:40:30 | INFO     | EventLogger               | EventLogger initialized. Image store: logs
+2026-03-22 21:40:30 | INFO     | core.pipeline             | [Pipeline] FaceTrackingPipeline initialized.
+2026-03-22 21:40:30 | INFO     | __main__                  | [Main] Opening file: sample_video.mp4
+2026-03-22 21:40:30 | INFO     | EventLogger               | [SYSTEM] Session started. Source: sample_video.mp4
+2026-03-22 21:40:30 | INFO     | core.pipeline             | [Pipeline] Session 9 started for: sample_video.mp4
+2026-03-22 21:40:30 | INFO     | __main__                  | [Main] Starting main loop...
+2026-03-22 21:40:31 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=1 | status=RETURNING
+2026-03-22 21:40:32 | INFO     | EventLogger               | [ENTRY] face_id=0c6a157d | frame=1 | status=RETURNING
+2026-03-22 21:40:33 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=1 | status=RETURNING
+2026-03-22 21:40:35 | INFO     | EventLogger               | [ENTRY] face_id=341b14b5 | frame=3 | status=RETURNING
+2026-03-22 21:40:36 | INFO     | EventLogger               | [ENTRY] face_id=2ca9f02e | frame=3 | status=RETURNING
+2026-03-22 21:40:37 | INFO     | EventLogger               | [ENTRY] face_id=a1331423 | frame=6 | status=RETURNING
+2026-03-22 21:40:43 | INFO     | EventLogger               | [ENTRY] face_id=b099a05c | frame=30 | status=RETURNING
+2026-03-22 21:40:46 | INFO     | EventLogger               | [ENTRY] face_id=1bb41286 | frame=30 | status=RETURNING
+2026-03-22 21:40:49 | INFO     | EventLogger               | [ENTRY] face_id=3c82c416 | frame=39 | status=RETURNING
+2026-03-22 21:40:50 | INFO     | EventLogger               | [ENTRY] face_id=9a71f9a0 | frame=39 | status=RETURNING
+2026-03-22 21:40:54 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=47
+2026-03-22 21:40:54 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=47
+2026-03-22 21:40:55 | INFO     | EventLogger               | [EXIT]  face_id=341b14b5 | frame=49
+2026-03-22 21:40:57 | INFO     | EventLogger               | [ENTRY] face_id=0a66f0c2 | frame=54 | status=RETURNING
+2026-03-22 21:40:58 | INFO     | EventLogger               | [ENTRY] face_id=bffcff24 | frame=57 | status=RETURNING
+2026-03-22 21:41:00 | INFO     | EventLogger               | [ENTRY] face_id=64678f2f | frame=57 | status=RETURNING
+2026-03-22 21:41:01 | INFO     | EventLogger               | [ENTRY] face_id=cc704d6b | frame=60 | status=RETURNING
+2026-03-22 21:41:14 | INFO     | EventLogger               | [ENTRY] face_id=a8c6b2f9 | frame=75 | status=RETURNING
+2026-03-22 21:41:14 | INFO     | EventLogger               | [EXIT]  face_id=1bb41286 | frame=76
+2026-03-22 21:41:15 | INFO     | EventLogger               | [ENTRY] face_id=cce24498 | frame=78 | status=RETURNING
+2026-03-22 21:41:23 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=93 | status=RETURNING
+2026-03-22 21:41:24 | INFO     | EventLogger               | [ENTRY] face_id=075cf1f5 | frame=96 | status=RETURNING
+2026-03-22 21:41:25 | INFO     | EventLogger               | [ENTRY] face_id=54a6eb8f | frame=96 | status=RETURNING
+2026-03-22 21:41:27 | INFO     | EventLogger               | [EXIT]  face_id=0a66f0c2 | frame=100
+2026-03-22 21:41:28 | INFO     | EventLogger               | [EXIT]  face_id=b099a05c | frame=103
+2026-03-22 21:41:28 | INFO     | EventLogger               | [EXIT]  face_id=64678f2f | frame=103
+2026-03-22 21:41:30 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=105 | status=RETURNING
+2026-03-22 21:41:30 | INFO     | EventLogger               | [EXIT]  face_id=cc704d6b | frame=106
+2026-03-22 21:41:33 | INFO     | EventLogger               | [EXIT]  face_id=3c82c416 | frame=109
+2026-03-22 21:41:41 | INFO     | EventLogger               | [EXIT]  face_id=a8c6b2f9 | frame=121
+2026-03-22 21:41:42 | INFO     | EventLogger               | [ENTRY] face_id=7e2633c1 | frame=123 | status=RETURNING
+2026-03-22 21:41:45 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=129 | status=RETURNING
+2026-03-22 21:41:50 | INFO     | EventLogger               | [EXIT]  face_id=bffcff24 | frame=139
+2026-03-22 21:41:50 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=139
+2026-03-22 21:41:57 | INFO     | EventLogger               | [ENTRY] face_id=4ea52770 | frame=144 | status=RETURNING
+2026-03-22 21:41:58 | INFO     | EventLogger               | [ENTRY] face_id=ec7c927d | frame=150 | status=RETURNING
+2026-03-22 21:42:00 | INFO     | EventLogger               | [EXIT]  face_id=0c6a157d | frame=154
+2026-03-22 21:42:00 | INFO     | EventLogger               | [EXIT]  face_id=cce24498 | frame=154
+2026-03-22 21:42:02 | INFO     | EventLogger               | [EXIT]  face_id=2ca9f02e | frame=163
+2026-03-22 21:42:05 | INFO     | EventLogger               | [ENTRY] face_id=514629e5 | frame=174 | status=RETURNING
+2026-03-22 21:42:05 | INFO     | EventLogger               | [EXIT]  face_id=a1331423 | frame=175
+2026-03-22 21:42:05 | INFO     | EventLogger               | [EXIT]  face_id=9a71f9a0 | frame=175
+2026-03-22 21:42:05 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=175
+2026-03-22 21:42:05 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=178
+2026-03-22 21:42:10 | INFO     | EventLogger               | [EXIT]  face_id=4ea52770 | frame=190
+2026-03-22 21:42:12 | INFO     | EventLogger               | [EXIT]  face_id=075cf1f5 | frame=196
+2026-03-22 21:42:14 | INFO     | EventLogger               | [ENTRY] face_id=314d5ccf | frame=201 | status=RETURNING
+2026-03-22 21:42:17 | INFO     | EventLogger               | [ENTRY] face_id=30dac6e3 | frame=207 | status=RETURNING
+2026-03-22 21:42:19 | INFO     | EventLogger               | [ENTRY] face_id=2d9819bb | frame=210 | status=RETURNING
+2026-03-22 21:42:20 | INFO     | EventLogger               | [ENTRY] face_id=d695d870 | frame=216 | status=RETURNING
+2026-03-22 21:42:22 | INFO     | EventLogger               | [ENTRY] face_id=f980bdfa | frame=222 | status=RETURNING
+2026-03-22 21:42:23 | INFO     | EventLogger               | [ENTRY] face_id=3eaf9fe3 | frame=222 | status=RETURNING
+2026-03-22 21:42:23 | INFO     | EventLogger               | [ENTRY] face_id=d328cd65 | frame=225 | status=RETURNING
+2026-03-22 21:42:27 | INFO     | EventLogger               | [ENTRY] face_id=1f184ed3 | frame=231 | status=RETURNING
+2026-03-22 21:42:28 | INFO     | EventLogger               | [ENTRY] face_id=73756598 | frame=234 | status=RETURNING
+2026-03-22 21:42:30 | INFO     | EventLogger               | [ENTRY] face_id=df033a8b | frame=237 | status=RETURNING
+2026-03-22 21:42:31 | INFO     | EventLogger               | [ENTRY] face_id=80781916 | frame=237 | status=RETURNING
+2026-03-22 21:42:32 | INFO     | EventLogger               | [EXIT]  face_id=7e2633c1 | frame=238
+2026-03-22 21:42:33 | INFO     | __main__                  | [Main] End of stream or read error. Stopping.
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=d328cd65 | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=514629e5 | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=314d5ccf | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=ec7c927d | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=df033a8b | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=1f184ed3 | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=2d9819bb | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=3eaf9fe3 | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=73756598 | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=30dac6e3 | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=54a6eb8f | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=d695d870 | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=80781916 | frame=240
+2026-03-22 21:42:33 | INFO     | EventLogger               | [EXIT]  face_id=f980bdfa | frame=240
+2026-03-22 21:42:33 | INFO     | database.db_manager       | [DB] Session 9 ended. Unique visitors: 36
+2026-03-22 21:42:33 | INFO     | EventLogger               | [SUMMARY] Session ended | unique_visitors=36 | total_events=370
+2026-03-22 21:42:33 | INFO     | core.pipeline             | [Pipeline] Session ended. Summary: {'unique_visitors': 36, 'total_events': 370, 'entry_events': 185, 'exit_events': 185}
+2026-03-22 21:42:33 | INFO     | database.db_manager       | [DB] Connection closed.
