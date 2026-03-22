@@ -1,10 +1,8 @@
 # 🎭 Intelligent Face Tracker with Auto-Registration & Visitor Counting
 
-> **This project is a part of a hackathon run by [https://katomaran.com](https://katomaran.com)**
-
 ---
 
-## 📌 Overview
+##  Overview
 
 A production-grade, AI-driven unique visitor counter that processes a video stream (file or live RTSP camera) to:
 - **Detect** faces in real-time using YOLOv8
@@ -16,7 +14,7 @@ A production-grade, AI-driven unique visitor counter that processes a video stre
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
@@ -60,7 +58,7 @@ A production-grade, AI-driven unique visitor counter that processes a video stre
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 face_tracker/
@@ -97,7 +95,7 @@ face_tracker/
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Prerequisites
 - Python 3.9+
@@ -107,7 +105,7 @@ face_tracker/
 ### 2. Clone & Install
 
 ```bash
-git clone <https://github.com/sindhiya225/face-tracker>
+git clone https://github.com/sindhiya225/face-tracker
 cd face_tracker
 
 # Create virtual environment (recommended)
@@ -180,7 +178,7 @@ python frontend/dashboard.py
 
 ---
 
-## 📋 Sample `config.json`
+##  Sample `config.json`
 
 ```json
 {
@@ -226,7 +224,7 @@ python frontend/dashboard.py
 
 ---
 
-## 🔑 Key Design Decisions & Assumptions
+##  Key Design Decisions & Assumptions
 
 | Topic | Decision | Reason |
 |-------|----------|--------|
@@ -247,7 +245,7 @@ python frontend/dashboard.py
 
 ---
 
-## 📊 Compute Load Estimation
+##  Compute Load Estimation
 
 ### CPU Mode (default)
 
@@ -276,11 +274,13 @@ To enable GPU:
 
 ---
 
-## 🧪 Sample Output
+##  Sample Output
 
 ### main.py
 <img width="869" height="301" alt="Screenshot 2026-03-22 214244" src="https://github.com/user-attachments/assets/61018f0f-bf60-48b2-9802-3f05492442f3" />
+
 <img width="1622" height="719" alt="Screenshot 2026-03-22 214048" src="https://github.com/user-attachments/assets/7b15ffda-0bfd-43f3-89dc-f73ce4f9330f" />
+
 <img width="1062" height="588" alt="Screenshot 2026-03-22 214156" src="https://github.com/user-attachments/assets/12ebd61e-61b5-4dca-88eb-d9859611d672" />
 
 
@@ -297,7 +297,7 @@ To enable GPU:
 
 ---
 
-## 🤖 AI Planning Document
+##  AI Planning Document
 
 ### Planning Phase
 
@@ -339,13 +339,13 @@ The problem was decomposed into 5 functional layers:
 
 ---
 
-## 🎥 Demo Video
+##  Demo Video
 
 > **[https://www.loom.com/share/1433246343c044fcac106cf4138073b6]**
 
 ---
 
-## 📝 License
+##  License
 
 MIT License — free to use and modify.
 
